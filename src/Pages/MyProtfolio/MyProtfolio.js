@@ -5,7 +5,7 @@ const MyProtfolio = () => {
 
    
     return (
-        <div className='px-5 mt-10'>
+        <div className='px-5 mt-11'>
             <div className='lg:flex md:flex py-5 mt-3'> 
                 <div className='flex-1 px-4'>
                     <h2 className='text-2xl py-3'>HELLO, MY NAME IS<span className='font-bold text-primary'> MD ARIF HOSSAIN</span></h2>
