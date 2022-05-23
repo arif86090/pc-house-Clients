@@ -134,7 +134,7 @@ const Login = () => {
                         </form>
                        
                         <p className='text-center py-2'><small>New to doctors-portal?<Link
-                        className='text-primary '
+                        className='text-primary font-bold '
                         to='/register'
                         >Create an account</Link> </small></p>
 

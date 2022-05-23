@@ -22,7 +22,7 @@ import ManageOrder from './Pages/Deshboard/ManageOrder';
 import Footer from './Pages/Home/Footer/Footer';
 import Blog from './Pages/Blog/Blog';
 import MyProtfolio from './Pages/MyProtfolio/MyProtfolio';
-
+import Nodata from './Pages/Nodata/Nodata'
 
 function App() {
 return (
@@ -59,6 +59,7 @@ return (
         
         <Route path='payment/:id' element={<Payment></Payment>}></Route>
         </Route>
+        <Route path='*' element={<Nodata></Nodata>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

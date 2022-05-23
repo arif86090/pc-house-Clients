@@ -24,7 +24,7 @@ const Register = () => {
       
       const[token]=UserHook(user || guser);
       if(token){
-        naviget('/appointment');
+        naviget('/');
       }
      
 
@@ -121,7 +121,7 @@ const Register = () => {
                       
 
                         <p className='text-center py-2'><small>You have an account?<Link
-                        className='text-primary '
+                        className='text-primary font-bold '
                         to='/login'
                         >Login</Link> </small></p>
                     <div class="divider">OR</div>
