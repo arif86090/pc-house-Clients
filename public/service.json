@@ -1,0 +1,29 @@
+[
+    {
+    
+    "name":"Intel Core i9",
+    "img":"https://ichef.bbci.co.uk/news/976/cpsprodpb/5ABD/production/_117592232_core.jpg",
+    "descripation":"Intel Core is a line of streamlined midrange consumer, workstation and enthusiast computer central processing units (CPUs) marketed by Intel Corporation. ",
+    "minimum":"200",
+    "available":"100000",
+    "price":"20000"
+  
+    },
+    {
+    "name":"Hp a4 Mouse",
+    "img":"https://consumer-img.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/accessories/wireless-mouse-gt/imgs/pc/huawei-wireless-mouse-gt-kv.jpg",
+    "descripation":"A keyboard is for putting information including letters, words and numbers into your computer. You press the individual buttons on the keyboard when you type.",
+    "minimum":"300",
+    "available":"100000",
+    "price":"900"
+       },
+       {
+        "name":"Hp h-120 Keyboards",
+    "img":"https://www.hp.com/us-en/shop/app/assets/images/uploads/prod/are-mechanical-keyboards-better-gaming-hero1537748638452.jpg",
+    "descripation":"From Sinai, Moses led the Israelites to the Desert of Paran on the border of Canaan. From there he sent twelve spies into the land.",
+    "minimum":"500",
+    "available":"150000",
+    "price":"600"
+       }
+ 
+]

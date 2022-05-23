@@ -1,0 +1,10 @@
+.sendMail{
+    outline: none;
+    border: none;
+    background: #187a37;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-weight: bold;
+    padding: 8px 18px;
+    color: white;
+}
