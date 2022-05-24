@@ -1,7 +1,9 @@
-### Mobile Corner
+### Pc-House
 
 live project: [https://assignments-11.netlify.app/](https://assignments-11.netlify.app/)
-* this a Mobile shope website
+* This a computar parch selling website
+* This website show my portfolio
+* using daisUi from Tailwaind components
 * without login you can't show any products details. 
 * useing firebase and firebase hooks.
 * without Authentication you can't go checkOut page.
