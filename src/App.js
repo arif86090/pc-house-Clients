@@ -23,6 +23,7 @@ import Footer from './Pages/Home/Footer/Footer';
 import Blog from './Pages/Blog/Blog';
 import MyProtfolio from './Pages/MyProtfolio/MyProtfolio';
 import Nodata from './Pages/Nodata/Nodata'
+import Myprofile from './Pages/Deshboard/Myprofile';
 
 function App() {
 return (
@@ -49,7 +50,8 @@ return (
             <Deshboard></Deshboard>
          </Required>
       }>
-        <Route index element={<Myorder></Myorder>}></Route>
+        <Route index element={<Myprofile></Myprofile>}></Route>
+        <Route path='myorder' element={<Myorder></Myorder>}></Route>
         <Route path='review' element={<MyReview></MyReview>}></Route>
         <Route path='user' element={<RequierAdmin><User></User></RequierAdmin>}></Route>
         
