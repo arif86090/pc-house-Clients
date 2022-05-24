@@ -16,14 +16,14 @@ const Deshboard = () => {
                   <h2 className='text-center font-bold  text-2xl py-5'>Deshboard</h2>
                   <Outlet></Outlet>
                    
-                
+
                 </div> 
                 <div className="drawer-side ">
                     <label for="my-drawer-2" class="drawer-overlay"></label> 
                     <ul class="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
 
                     <li><NavLink to='/deshboard'>My Profile</NavLink></li>
-                    <li><NavLink to='/deshboard/myorder'>My Order</NavLink></li>
+                    <li className='mt-2'><NavLink to='/deshboard/myorder'>My Order</NavLink></li>
                     <li className='mt-2'><NavLink to='/deshboard/review'>Review</NavLink></li>
                     
                     {admin &&  <>

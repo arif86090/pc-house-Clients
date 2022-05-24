@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate,Link } from 'react-router-dom';
 import auth from '../../firebase.init';
+import Deleteorder from './Deleteorder';
 // import { useQuery } from 'react-query';
 
 
@@ -13,6 +14,7 @@ const Myorder = () => {
     const userEmail=user?.email;
 
     const [veiworder,setveiwOrder]=useState([]);
+    const [OrderDelete,SetOrderDelete]=useState(null);
     const naviget=useNavigate();
 
 
@@ -42,8 +44,8 @@ const Myorder = () => {
   },[user]);
 
   const deleteOrder = (id) =>{
-    const proceed=window.confirm('Are you sure you want to Delete');
-    if(proceed){
+    
+   
         console.log('id=',id)
         const url=`http://localhost:5000/myorder/${id}`;
         fetch(url,{
@@ -56,9 +58,10 @@ const Myorder = () => {
               console.log('delete success full');
               const remaining= veiworder.filter(user => user._id !== id);
               setveiwOrder(remaining);
+              SetOrderDelete(null)
           }
         })
-    }
+    
   }
 
     return (
@@ -94,10 +97,15 @@ const Myorder = () => {
              
              {/* paymentid */}
                   {(d.price && !d.paid) && <Link to={`/deshboard/payment/${d._id}`}><button className='btn btn-primary'>pay</button></Link>}
-                  {(d.price && !d.paid) && <button
+                  {/* {(d.price && !d.paid) && <button
                    className='btn btn-red ml-3'
                    onClick={()=>deleteOrder(d._id)}
-                   >Cancle Order</button>}
+                   >Cancle Order</button>} */}
+
+                    {(d.price && !d.paid) && <label for='delete-modal'
+                   className='btn btn-red ml-3'
+                   onClick={()=>SetOrderDelete(d)}
+                   >Cancle Order</label>}
 
                    {(d.price && d.paid && !d.approved) && <span className='text-red-500 font-bold'>payment pending..</span>}
 
@@ -111,6 +119,16 @@ const Myorder = () => {
  </tbody>
 </table>
 </div>
+    <div>
+  
+            {OrderDelete && <Deleteorder
+            OrderDelete={OrderDelete}
+            SetOrderDelete={SetOrderDelete}
+            deleteOrder={deleteOrder}
+            ></Deleteorder> }
+  </div>
+
+
      </div>
     );
 };

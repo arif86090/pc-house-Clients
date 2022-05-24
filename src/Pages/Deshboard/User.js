@@ -21,8 +21,8 @@ const User = () => {
       <tr>
       
         <th>Email</th>
-        <th>admin</th>
-        <th>Delete</th>
+        <th>Admin</th>
+       
 
         
       </tr>

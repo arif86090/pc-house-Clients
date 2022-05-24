@@ -20,8 +20,8 @@ const Banner = () => {
               <div class="hero-content flex-col lg:flex-row-reverse">
                 <img src={banner} className="max-w-sm rounded-lg  w-full"/>
                 <div>
-                  <h1 class="text-5xl font-bold">Box Office News!</h1>
-                  <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                  <h1 class="text-2xl font-bold">Leading Computer, Laptop & Gaming PC Retail & Online Company in Bangladesh</h1>
+                  <p class="py-6">Technology has become a part of our daily lives and for a huge portion of our life, we are dependent on tech products daily. There is hardly a home in Bangladesh without a tech product. This is where we come in. Star Tech & Engineering Ltd had started as a Tech product shop way back in March 2007</p>
                   <button class="btn btn-slate-800 uppercase text-white font-bold mt-5 ">Get Started</button>
                 </div>
               </div>

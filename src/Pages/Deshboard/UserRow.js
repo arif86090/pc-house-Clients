@@ -36,8 +36,11 @@ const UserRow = ({user,refetch}) => {
                   onClick={makeAdmin}
                   >Make Admin</button>
                   }
+                  {
+                      user.role === 'admin' && <p className='font-bold text-success'>Admin</p>
+                  }
                   </td>
-                <td><button className='btn btn-primary'>Remove</button></td>
+                
                
              
         </tr>

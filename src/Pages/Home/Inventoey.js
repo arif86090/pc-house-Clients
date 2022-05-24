@@ -32,8 +32,19 @@ const Inventoey = () => {
     const onSubmit = async (data) => {
 
         const quantity=data.quantity;
+        const minimums=parseInt(minimum)
         
-         if(minimum < quantity &&  quantity < available ){   
+        if(quantity < minimums){
+            // alert(`please minimum order ${minimum} piece`)
+            setpError(`please minimum order ${minimum} piece`)
+        }
+      if(available < quantity){
+            // alert('Product not availables')
+            setpError('Product not availables')
+        }
+
+
+         if(minimums < quantity &&  quantity < available ){   
         const availableQty=Number(available)-Number(quantity);
 
         const inputproductQunty = {
@@ -49,6 +60,7 @@ const Inventoey = () => {
         }
 
         const prices=quantity*price;
+
 
   
                 const order={
@@ -79,16 +91,10 @@ const Inventoey = () => {
                     navigate('/')
                    reset();
                   })
+                  
+                  setpError(`${quantity} products Order successful`)
+                }
             
-                }
-               if(quantity < minimum){
-                    // alert(`please minimum order ${minimum} piece`)
-                    setpError(`please minimum order ${minimum} piece`)
-                }
-              if(available < quantity){
-                    // alert('Product not availables')
-                    setpError('Product not availables')
-                }
     }
 
 
