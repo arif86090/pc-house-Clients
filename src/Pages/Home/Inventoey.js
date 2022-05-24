@@ -1,17 +1,19 @@
 import axios from 'axios';
 import React from 'react';
+import { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { useQuery } from 'react-query';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const Inventoey = () => {
 
     const [user]=useAuthState(auth)
+    const [perror,setpError]=useState('');
     const UserName=user?.displayName;
     const email=user?.email;
-
+    const navigate=useNavigate();
    
     
     const { register, formState: { errors }, handleSubmit,reset } = useForm();
@@ -25,11 +27,13 @@ const Inventoey = () => {
         return <p>loading....</p>
     }
     const {_id,name,img,minimum,available,price}=products;
-
+    
 
     const onSubmit = async (data) => {
 
         const quantity=data.quantity;
+        
+         if(minimum < quantity &&  quantity < available ){   
         const availableQty=Number(available)-Number(quantity);
 
         const inputproductQunty = {
@@ -72,10 +76,19 @@ const Inventoey = () => {
                   .then(data => {
                     console.log('success',data);
                     alert('Your Order successful please pay!!')
+                    navigate('/')
                    reset();
                   })
             
- 
+                }
+               if(quantity < minimum){
+                    // alert(`please minimum order ${minimum} piece`)
+                    setpError(`please minimum order ${minimum} piece`)
+                }
+              if(available < quantity){
+                    // alert('Product not availables')
+                    setpError('Product not availables')
+                }
     }
 
 
@@ -155,6 +168,7 @@ class="input input-bordered w-full max-w-xs"
 <label class="label">
 {errors.quantity?.type === 'required' &&  <span className="label-text-alt  text-red-500">{errors.quantity.message}</span> }
 </label>
+<label><span className="label-text-alt  text-red-500 pb-3">{perror}</span></label>
 </div>
 
 
