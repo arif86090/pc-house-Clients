@@ -75,7 +75,7 @@ const Inventoey = () => {
                   .then(res => res.json())
                   .then(data => {
                     console.log('success',data);
-                    alert('Your Order successful please pay !!')
+                    alert('Your Order  please pay !!')
                     navigate('/')
                    reset();
                   })
