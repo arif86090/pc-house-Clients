@@ -9,7 +9,7 @@ const MyProtfolio = () => {
             <div className='lg:flex md:flex py-5 mt-3'> 
                 <div className='flex-1 px-4'>
                     <h2 className='text-2xl py-3'>HELLO, MY NAME IS<span className='font-bold text-primary'> MD ARIF HOSSAIN</span></h2>
-                    <h6 className='py-6'>I Have Been Designing And Developing Website For More Then 2 Years.i am a MERN strak web developar. It Will Be Responsive, Mobile-Friendly.If You Need To Build A Full Complete Website With More Functions And Unque Look For Your Service/Business/Protfolio, Please Contact Me</h6>
+                    <h6 className='py-6'>I Have Been Designing And Developing Website For More Then 2 Years.i am a MERN strak web developar. It Will Be Responsive And Mobile-Friendly.If You Need To Build A Full Complete Website With More Functions And Unque Look For Your Service/Business/Protfolio, Please Contact Me</h6>
                     <p><span className='font-bold'>Name:</span>Md. Arif Hoassain</p>
                     <p><span className='font-bold py-2'>Address:</span>Dinajpur,Bangladesh</p>
                     <p><span className='font-bold '>Degree:</span>Honours 1st</p>
