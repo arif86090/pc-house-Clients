@@ -32,7 +32,7 @@ const AddDoctor = () => {
                     img:img
                     
                 }
-                fetch('http://localhost:5000/products',{
+                fetch('https://pacific-ocean-13112.herokuapp.com/products',{
                     method:'POST',
                     headers:{
                       'content-type':'application/json',

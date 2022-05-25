@@ -19,7 +19,7 @@ const Inventoey = () => {
     const { register, formState: { errors }, handleSubmit,reset } = useForm();
 
     const {id}=useParams();
-    const {data:products,isLoading,refetch}=useQuery(['perProducts'],()=>fetch(`http://localhost:5000/products/${id}`)
+    const {data:products,isLoading,refetch}=useQuery(['perProducts'],()=>fetch(`https://pacific-ocean-13112.herokuapp.com/products/${id}`)
     .then(res => res.json())
     )
     // const email=data.email;
@@ -52,7 +52,7 @@ const Inventoey = () => {
             quantity:availableQty,
         }
         try{
-            const {data} =await axios.put(`http://localhost:5000/updateQunty`,inputproductQunty);
+            const {data} =await axios.put(`https://pacific-ocean-13112.herokuapp.com/updateQunty`,inputproductQunty);
             // alert('Update success');
           
         }catch(err){
@@ -76,7 +76,7 @@ const Inventoey = () => {
                 }
 
 
-                fetch('http://localhost:5000/order',{
+                fetch('https://pacific-ocean-13112.herokuapp.com/order',{
                     method:'POST',
                     headers:{
                       'content-type':'application/json',

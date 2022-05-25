@@ -14,7 +14,7 @@ const CheckoutForm = ({order}) => {
   
   useEffect(() => {
     
-    fetch('http://localhost:5000/create-payment-intent', {
+    fetch('https://pacific-ocean-13112.herokuapp.com/create-payment-intent', {
       method: "POST",
 
       headers:{
@@ -86,7 +86,7 @@ const CheckoutForm = ({order}) => {
 
             }
             // update pay btn in backend
-            fetch(`http://localhost:5000/myorder/${_id}`,{
+            fetch(`https://pacific-ocean-13112.herokuapp.com/myorder/${_id}`,{
               method:'PATCH',
               headers:{
                 'content-type':'application/json'

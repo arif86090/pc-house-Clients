@@ -13,7 +13,7 @@ const Payment = () => {
 
     const {id}=useParams();
 
-    const {data:order ,isLoading,refetch}=useQuery(['payments',id],()=>fetch(`http://localhost:5000/myorder/${id}`,{
+    const {data:order ,isLoading,refetch}=useQuery(['payments',id],()=>fetch(`https://pacific-ocean-13112.herokuapp.com/myorder/${id}`,{
         method:'GET',
         headers:{
             authorization : `Bearer ${localStorage.getItem('accesToken')}`

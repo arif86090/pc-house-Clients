@@ -8,7 +8,7 @@ const handelDelete = id =>{
     const proceed=window.confirm('Are you sure you want to Delete');
     if(proceed){
         console.log('id=',id)
-        const url=`http://localhost:5000/products/${id}`;
+        const url=`https://pacific-ocean-13112.herokuapp.com/products/${id}`;
         fetch(url,{
             method:'DELETE'
         })

@@ -7,7 +7,7 @@ const OrderRow = ({index,order,refetch}) => {
         const proceed=window.confirm('Are you sure you want to Delete');
         if(proceed){
             console.log('id=',id)
-            const url=`http://localhost:5000/myorder/${id}`;
+            const url=`https://pacific-ocean-13112.herokuapp.com/myorder/${id}`;
             fetch(url,{
                 method:'DELETE'
             })
@@ -20,7 +20,7 @@ const OrderRow = ({index,order,refetch}) => {
       }
      const  confirmPayment = id =>{
          
-        fetch(`http://localhost:5000/updatePayment/${id}`,{
+        fetch(`https://pacific-ocean-13112.herokuapp.com/updatePayment/${id}`,{
             method:'PATCH',
             headers:{
               'content-type':'application/json'

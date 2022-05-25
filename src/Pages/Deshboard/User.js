@@ -5,7 +5,7 @@ import UserRow from './UserRow';
 
 const User = () => {
 
-       const {data,isLoading,refetch}=useQuery(['booking'],()=>fetch('http://localhost:5000/user')
+       const {data,isLoading,refetch}=useQuery(['booking'],()=>fetch('https://pacific-ocean-13112.herokuapp.com/user')
     .then(res => res.json())
     )
     // const email=data.email;

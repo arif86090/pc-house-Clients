@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 
 import Navbar from './Pages/Navbar/Navbar';
-import Appointment from './Pages/Appointments/Appointment';
+
 import Login from './Pages/Login/Login';
 import Register from './Pages/Login/Register';
 import Required from './Pages/Required/RequredAuth'
@@ -24,6 +24,7 @@ import Blog from './Pages/Blog/Blog';
 import MyProtfolio from './Pages/MyProtfolio/MyProtfolio';
 import Nodata from './Pages/Nodata/Nodata'
 import Myprofile from './Pages/Deshboard/Myprofile';
+import AddProfile from './Pages/Deshboard/AddProfile';
 
 function App() {
 return (
@@ -37,11 +38,7 @@ return (
        <Inventoey></Inventoey>
       </Required>
       }></Route>
-       <Route path='/appointment' element={
-       <Required>
-         <Appointment></Appointment>
-       </Required>
-       }></Route>
+     
        <Route path='/blog' element={<Blog></Blog>}></Route>
        <Route path='/login' element={<Login></Login>}></Route>
        <Route path='/register' element={<Register></Register>}></Route>
@@ -58,7 +55,7 @@ return (
         <Route path='add' element={<RequierAdmin><AddDoctor></AddDoctor></RequierAdmin>}></Route>
         <Route path='manageProducts' element={<RequierAdmin><ManageDoctors></ManageDoctors></RequierAdmin>}></Route>
         <Route path='manageOrder' element={<RequierAdmin><ManageOrder></ManageOrder></RequierAdmin>}></Route>
-        
+        <Route path='addprofile' element={<AddProfile></AddProfile>}></Route>
         <Route path='payment/:id' element={<Payment></Payment>}></Route>
         </Route>
         <Route path='*' element={<Nodata></Nodata>}></Route>

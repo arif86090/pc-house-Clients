@@ -3,7 +3,7 @@ import { useQuery } from 'react-query';
 import OrderRow from './OrderRow';
 
 const ManageOrder = () => {
-    const {data,isLoading,refetch}=useQuery( 'orders',()=>fetch('http://localhost:5000/order',{
+    const {data,isLoading,refetch}=useQuery( 'orders',()=>fetch('https://pacific-ocean-13112.herokuapp.com/order',{
         headers:{
              authorization: `Bearer ${localStorage.getItem('accesToken')}`
           }

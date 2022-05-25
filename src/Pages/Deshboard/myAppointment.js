@@ -15,7 +15,7 @@ const MyAppointment = () => {
     const naviget=useNavigate();
 
  /*    useEffect(()=>{
-        fetch(`http://localhost:5000/booking?patient=${userEmail}`)
+        fetch(`https://pacific-ocean-13112.herokuapp.com/booking?patient=${userEmail}`)
         .then(res => res.json())
         .then(data => setAppoinments(data))
     },[user]) */ 
@@ -23,7 +23,7 @@ const MyAppointment = () => {
     useEffect(() => {
       const getAppointment= async () => {
           
-          const url=`http://localhost:5000/booking?patient=${userEmail}`;
+          const url=`https://pacific-ocean-13112.herokuapp.com/booking?patient=${userEmail}`;
         try{
           const {data}=await axios.get(url,{
               headers:{
@@ -45,7 +45,7 @@ const MyAppointment = () => {
       
   },[user]);
 
-  /*   const {data,isLoading,refetch}=useQuery(['booking',user],()=>fetch(`http://localhost:5000/booking?patient=${userEmail}`)
+  /*   const {data,isLoading,refetch}=useQuery(['booking',user],()=>fetch(`https://pacific-ocean-13112.herokuapp.com/booking?patient=${userEmail}`)
     .then(res => res.json())
     )
     if(isLoading){

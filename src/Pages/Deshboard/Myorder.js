@@ -21,13 +21,14 @@ const Myorder = () => {
     useEffect(() => {
       const getAppointment= async () => {
           
-          const url=`http://localhost:5000/myorder?email=${userEmail}`;
+          const url=`https://pacific-ocean-13112.herokuapp.com/myorder?email=${userEmail}`;
         try{
           const {data}=await axios.get(url,{
               headers:{
                authorization : `Bearer ${localStorage.getItem('accesToken')}`
               }
           });
+         
           setveiwOrder(data)
         }
         catch(error){
@@ -47,7 +48,7 @@ const Myorder = () => {
     
    
         console.log('id=',id)
-        const url=`http://localhost:5000/myorder/${id}`;
+        const url=`https://pacific-ocean-13112.herokuapp.com/myorder/${id}`;
         fetch(url,{
             method:'DELETE'
         })

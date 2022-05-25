@@ -1,6 +1,6 @@
 ### Pc-House
 
-live project: [https://assignments-11.netlify.app/](https://assignments-11.netlify.app/)
+live project: [https://pc-houses.netlify.app/](https://pc-houses.netlify.app/)
 * This a computar parch selling website
 * This website show my portfolio
 * using daisUi from Tailwaind components

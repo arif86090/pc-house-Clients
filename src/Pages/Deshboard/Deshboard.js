@@ -23,11 +23,15 @@ const Deshboard = () => {
                     <ul class="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
 
                     <li><NavLink to='/deshboard'>My Profile</NavLink></li>
-                    <li className='mt-2'><NavLink to='/deshboard/myorder'>My Order</NavLink></li>
-                    <li className='mt-2'><NavLink to='/deshboard/review'>Review</NavLink></li>
-                    
+                   
+                    {!admin &&  <>
+                        <li className='mt-2'><NavLink to='/deshboard/myorder'>My Order</NavLink></li>
+                        <li className='mt-2'><NavLink to='/deshboard/review'>Review</NavLink></li>
+                    </>
+                    }
+                   
                     {admin &&  <>
-                     <li><NavLink to='/deshboard/add'>Add Product</NavLink></li>
+                     <li className='mt-2'><NavLink to='/deshboard/add'>Add Product</NavLink></li>
                     <li><NavLink to='/deshboard/user'>All user</NavLink></li>
                     <li><NavLink to='/deshboard/manageProducts'>Manage Products</NavLink></li>
                     <li><NavLink to='/deshboard/manageOrder'>Manage Order</NavLink></li>
